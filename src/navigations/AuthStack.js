@@ -1,5 +1,6 @@
 import React from 'react';
-import { ForgotPassword, Login, ResetPassword, Signup } from "..";
+import { ForgotPassword, Login, Radio, ResetPassword, Signup } from "..";
+import TabRoutes from './TabRoutes';
 
 
 export default function (Stack) {
@@ -9,7 +10,7 @@ export default function (Stack) {
             <Stack.Screen name="Signup" component={Signup} />
             <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
             <Stack.Screen name="ResetPassword" component={ResetPassword} />
-
+            <Stack.Screen name="TabRoutes" component={TabRoutes} />
         </>
     )
 } 

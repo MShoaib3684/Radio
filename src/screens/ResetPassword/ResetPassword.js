@@ -4,7 +4,7 @@ import ButtonWithLoader from '../../components/ButtonWithLoader';
 import InputText from '../../components/InputText';
 import validator from '../utils/validations';
 import { showError } from '../utils/helperFunction';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const ResetPassword = ({ navigation }) => {
     const [state, setState] = useState({
@@ -46,13 +46,29 @@ const ResetPassword = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.textInput} >
-                <Text style={{ alignSelf: 'center', color: 'black' }}>Reset Password?</Text>
+                <Text style={{ fontSize: 20, fontWeight: '700', alignSelf: 'center', color: 'black', bottom: 50 }}>Reset Password?</Text>
+                <View style={styles.icon}>
+                    <Icon
+                        name="lock-outline"
+                        color='grey'
+                        size={25}
+                        style={styles.inputIcon}
+                    />
+                </View>
                 <InputText
                     placeHolder="new password"
                     isSecure={isSecure}
                     secureTextEntry={isSecure}
                     onChangeText={(password) => updateState({ password })}
                 />
+                <View style={styles.icon}>
+                    <Icon
+                        name="lock-outline"
+                        color='grey'
+                        size={25}
+                        style={styles.inputIcon}
+                    />
+                </View>
                 <InputText
                     placeHolder="confirm new password"
                     isSecure={isSecure}
@@ -63,7 +79,7 @@ const ResetPassword = ({ navigation }) => {
             </View>
             <View style={{ flex: 1, justifyContent: 'space-evenly' }}>
                 <ButtonWithLoader
-                    text="Login"
+                    text="Continue"
                     onPress={onLogin}
                 />
 
@@ -83,7 +99,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         margin: 24,
         backgroundColor: 'white'
+    },
+    inputIcon: {
+
+        position: 'absolute',
+    },
+    icon: {
+        alignSelf: 'flex-start',
+        marginLeft: 40,
+        top: 10
     }
+
 });
 
 export default ResetPassword;

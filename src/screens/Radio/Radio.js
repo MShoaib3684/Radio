@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const Home = ({ navigation }) => {
+const Radio = ({ navigation }) => {
     return (
         <View>
-            <Text>a</Text>
+            <Text>Radio home</Text>
         </View>
     )
 }
 
-export default Home
+export default Radio
 
 const styles = StyleSheet.create({})

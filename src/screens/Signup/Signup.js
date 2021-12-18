@@ -4,7 +4,7 @@ import ButtonWithLoader from '../../components/ButtonWithLoader';
 import InputText from '../../components/InputText';
 import validator from '../utils/validations';
 import { showError } from '../utils/helperFunction';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Signup = ({ navigation }) => {
     const [state, setState] = useState({
@@ -49,14 +49,38 @@ const Signup = ({ navigation }) => {
         <View style={styles.container}>
 
             <View style={styles.textInput} >
+                <View style={styles.icon}>
+                    <Icon
+                        name="person-outline"
+                        color='grey'
+                        size={25}
+                        style={styles.inputIcon}
+                    />
+                </View>
                 <InputText
                     placeHolder="Username"
                     onChangeText={(userName) => updateState({ userName })}
                 />
+                <View style={styles.icon}>
+                    <Icon
+                        name="person-outline"
+                        color='grey'
+                        size={25}
+                        style={styles.inputIcon}
+                    />
+                </View>
                 <InputText
                     placeHolder="Email"
                     onChangeText={(email) => updateState({ email })}
                 />
+                <View style={styles.icon}>
+                    <Icon
+                        name="lock-outline"
+                        color='grey'
+                        size={25}
+                        style={styles.inputIcon}
+                    />
+                </View>
                 <InputText
                     placeHolder="Password"
                     isSecure={isSecure}
@@ -72,7 +96,8 @@ const Signup = ({ navigation }) => {
                     onPress={onLogin}
                 />
                 <Text style={{ alignSelf: 'center', fontSize: 16, fontWeight: '300' }}>
-                    Dont have an account? Login
+                    Dont have an account?
+                    <Text onPress={() => navigation.navigate('Login')}> Login</Text>
                 </Text>
             </View>
         </View>
@@ -90,6 +115,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         margin: 24,
         backgroundColor: 'white'
+    },
+    inputIcon: {
+        position: 'absolute',
+    },
+    icon: {
+        alignSelf: 'flex-start',
+        marginLeft: 40,
+        top: 10
     }
 });
 

@@ -30,11 +30,11 @@ export default InputText
 const styles = StyleSheet.create({
 
     inputStyle: {
+        paddingLeft: 40,
         height: 50,
         width: 300,
         borderWidth: 1.5,
         borderColor: 'grey',
-        borderColor: 'gray',
         color: 'black',
 
     }

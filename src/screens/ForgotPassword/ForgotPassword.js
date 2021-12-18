@@ -4,7 +4,7 @@ import ButtonWithLoader from '../../components/ButtonWithLoader';
 import InputText from '../../components/InputText';
 import validator from '../utils/validations';
 import { showError } from '../utils/helperFunction';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const ForgotPassword = ({ navigation }) => {
     const [state, setState] = useState({
@@ -45,11 +45,23 @@ const ForgotPassword = ({ navigation }) => {
     }
     return (
         <View style={styles.container}>
-            <View Style={{ flex: 1, }}>
-                <Text style={{ fontSize: 20, fontWeight: '700', alignSelf: 'center', }}>Forgot Password?</Text>
-            </View>
+
             <View style={styles.textInput} >
-                <Text style={{ fontWeight: '300', alignSelf: 'center', marginBottom: 20 }}>Enter Email for Verification Code </Text>
+                <View Style={{ flex: 1 }}>
+                    <Text
+                        style={{ fontSize: 20, fontWeight: '700', alignSelf: 'center', bottom: 50 }}>
+                        Forgot Password?
+                    </Text>
+                </View>
+                <Text style={{ fontWeight: '300', alignSelf: 'center', marginBottom: 20, color: 'black' }}>Enter Email for Verification Code </Text>
+                <View style={styles.icon}>
+                    <Icon
+                        name="person-outline"
+                        color='grey'
+                        size={25}
+                        style={styles.inputIcon}
+                    />
+                </View>
                 <InputText
                     placeHolder="Email"
                     onChangeText={(email) => updateState({ email })}
@@ -78,6 +90,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         margin: 24,
         backgroundColor: 'white'
+    },
+    inputIcon: {
+
+        position: 'absolute',
+    },
+    icon: {
+        alignSelf: 'flex-start',
+        marginLeft: 40,
+        top: 10
     }
 });
 
