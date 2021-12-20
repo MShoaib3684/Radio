@@ -19,7 +19,7 @@ export default function Routes({ navigation }) {
         <SafeAreaProvider>
             <NavigationContainer >
                 <Stack.Navigator screenOptions={{ header: () => null }} >
-                    {true ? MainStack(Stack)
+                    {false ? MainStack(Stack)
                         : AuthStack(Stack)
                     }
                 </Stack.Navigator>

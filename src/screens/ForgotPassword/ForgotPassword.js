@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         flex: 3,
         alignItems: 'center',
         justifyContent: 'center',
-        margin: 24,
+        margin: 50,
         backgroundColor: 'white'
     },
     inputIcon: {
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     },
     icon: {
         alignSelf: 'flex-start',
-        marginLeft: 40,
+        marginLeft: 15,
         top: 10
     }
 });

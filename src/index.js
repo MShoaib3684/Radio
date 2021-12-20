@@ -10,6 +10,7 @@ export { default as Radio } from './screens/Radio/Radio';
 export { default as TV } from './screens/TV/TV';
 export { default as Video } from './screens/Video/Video';
 export { default as Setting } from './screens/Setting/Setting';
+export { default as EditProfile } from './screens/EditProfile/EditProfile';
 
 
 
