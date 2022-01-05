@@ -10,33 +10,33 @@ import { Card } from 'react-native-material-cards'
 const DATA = [
     {
         id: "1",
-        URL: "https://www.youtube.com/watch?v=juIcenNQWLs.mp4",
-        name: "ali"
+        URL: require('../../assets/bellachao.mp4'),
+
     },
     {
         id: "2",
-        URL: "https://www.youtube.com/watch?v=juIcenNQWLs.mp4",
-        name: "ali"
+        URL: require('../../assets/bellachao.mp4'),
+
     },
     {
         id: "3",
-        URL: "https://www.youtube.com/watch?v=juIcenNQWLs.mp4",
-        name: "ali"
+        URL: require('../../assets/bellachao.mp4'),
+
     },
     {
         id: "4",
-        URL: "https://www.youtube.com/watch?v=juIcenNQWLs.mp4",
-        name: "ali"
+        URL: require('../../assets/bellachao.mp4'),
+
     },
     {
         id: "5",
-        URL: "https://www.youtube.com/watch?v=juIcenNQWLs.mp4",
-        name: "ali"
+        URL: require('../../assets/bellachao.mp4'),
+
     },
     {
         id: "6",
-        URL: "https://www.youtube.com/watch?v=juIcenNQWLs.mp4",
-        name: "ali"
+        URL: require('../../assets/bellachao.mp4'),
+
     },
 ];
 
@@ -55,8 +55,9 @@ const Video = ({ navigation }) => {
 
                         <ScrollView>
                             <Card >
-                                <View style={{ flex: 1, backgroundColor: 'green', maxWidth: "100%", alignSelf: 'center' }}>
-                                    <VideoPlayer video={{ uri: item.URL }}
+                                <View style={{ flex: 1, backgroundColor: 'green', alignSelf: 'center' }}>
+                                    {/* <VideoPlayer video={{ uri: item.URL }} */}
+                                    <VideoPlayer video={item.URL}
                                         autoplay={false}
                                         defaultMuted={true}
                                         // videoHeight={1300}
